@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Owner Dashboard – Smart Greet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 700px; margin: 40px auto; padding: 20px; }
+    h1 { text-align: center; margin-bottom: 30px; }
+    .btn { display: block; margin: 15px auto; padding: 15px 25px; font-size: 1.2em; width: 80%; max-width: 320px; text-align: center; background: #008cba; color: white; border: none; border-radius: 8px; cursor: pointer; text-decoration: none;}
+    .btn:hover { background: #005f5f; }
+    #logoutBtn { background: #f44336; margin-top: 40px; }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to Your Dashboard</h1>
+
+  <a href="create-template.html" class="btn">Create Invitation Template</a>
+  <a href="manage-templates.html" class="btn">View and Manage Templates</a>
+  <a href="generate-invite.html" class="btn">Generate Invite Links</a>
+  <a href="analytics.html" class="btn">View Analytics / Responses</a>
+  <button id="logoutBtn" class="btn">Logout</button>
+
+  <script type="module">
+    import { auth } from './assets/firebase.js';
+    import { signOut } from 'https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js';
+
+    document.getElementById('logoutBtn').addEventListener('click', () => {
+      signOut(auth).then(() => {
+        // Redirect to login page after logout
+        window.location.href = 'signup.html';
+      });
+    });
+
+    // You can add auth state checking here and redirect if not logged in
+  </script>
+
+</body>
+</html>
