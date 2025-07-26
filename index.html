@@ -19,4 +19,107 @@
       background: linear-gradient(135deg, #6f86d6, #48c6ef);
       color: #fff;
       display: flex;
-      align-items: center
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      text-align: center;
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      max-width: 480px;
+      padding: 40px 32px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    }
+    .icon {
+      font-size: 64px;
+      margin-bottom: 24px;
+      user-select: none;
+      text-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    }
+    h1 {
+      font-weight: 700;
+      font-size: 2.3rem;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+    p {
+      font-size: 1.12rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    }
+    ul {
+      text-align: left;
+      margin: 0 auto 32px;
+      max-width: 340px;
+      list-style: none;
+    }
+    ul li {
+      margin-bottom: 12px;
+      position: relative;
+      padding-left: 26px;
+      font-weight: 500;
+      font-size: 1rem;
+      user-select: none;
+    }
+    ul li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      top: 2px;
+      color: #00ff9c;
+      font-weight: bold;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 36px;
+      background: #00ff9c;
+      color: #0b3b2e;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(0, 255, 156, 0.6);
+      transition: background-color 0.3s ease, color 0.3s ease;
+      user-select: none;
+    }
+    .btn:hover,
+    .btn:focus {
+      background: #00e086;
+      color: #00331b;
+      outline: none;
+      box-shadow: 0 7px 22px rgba(0, 224, 134, 0.8);
+    }
+    /* Responsive */
+    @media (max-width: 520px) {
+      .container {
+        padding: 32px 24px;
+      }
+      h1 {
+        font-size: 1.9rem;
+      }
+      ul {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <div class="icon" aria-hidden="true">🎉</div>
+    <h1>Welcome to Smart Invite Manager</h1>
+    <p>
+      Easily create personalized invitations, send unique links for quick RSVP, and track responses—all in one place.
+    </p>
+    <ul>
+      <li>Customizable templates with Yes/No or open-ended questions</li>
+      <li>Generate unique invite links for your guests</li>
+      <li>View real-time stats on clicks and messages</li>
+      <li>Edit invitations and responses anytime before expiry</li>
+    </ul>
+    <a href="signup.html" class="btn" role="button">Get Started - Sign Up</a>
+  </div>
+</body>
+</html>
